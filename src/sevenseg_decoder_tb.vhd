@@ -36,12 +36,12 @@ end sevenseg_decoder_tb;
 
 architecture test_bench of sevenseg_decoder_tb is
     
-    component binaryHexDisp1 is
+    component binaryHexDisp is
         port(
         i_Hex : in std_logic_vector(3 downto 0);
         o_seg_n : out std_logic_vector(6 downto 0)
         );
-    end component binaryHexDisp1;
+    end component binaryHexDisp;
     
     signal i_Hex : std_logic_vector(3 downto 0) := (others => '0');
     signal o_seg_n : std_logic_vector(6 downto 0)  := (others => '0');
@@ -49,7 +49,7 @@ architecture test_bench of sevenseg_decoder_tb is
 begin
 
 
-    uut: binaryHexDisp1
+    uut: binaryHexDisp
         port map(
         i_Hex => i_Hex,
         o_seg_n => o_seg_n
